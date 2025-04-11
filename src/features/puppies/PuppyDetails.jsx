@@ -30,7 +30,7 @@ export default function PuppyDetails() {
     try {
       const response = await deletePuppy(id).unwrap();
       console.log(response);
-      navigate("/");
+      navigate("/")
     } catch (error) {
       console.error(error);
     }
@@ -56,9 +56,8 @@ export default function PuppyDetails() {
         <p>{puppy.breed}</p>
         <p>Team {puppy.team?.name ?? "Unassigned"}</p>
 
-        <button onClick={() => removePuppy(puppy.id)}>
-          Remove from roster
-        </button>
+        <button onClick={() => 
+          removePuppy(puppy.id)}>Remove from roster</button>
         <figure>
           <img src={puppy.imageUrl} alt={puppy.name} />
         </figure>

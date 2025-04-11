@@ -13,7 +13,7 @@ export default function PuppyForm() {
   const [addPuppy] = useAddPuppyMutation();
   const navigate = useNavigate();
   // TODO: Use the `addPuppy` mutation to add a puppy when the form is submitted
-  const postPuppy = async (event, id) => {
+  const postPuppy = async (event) => {
     event.preventDefault();
     const { data, error } = await addPuppy({ name, breed }).unwrap();
     if (error) {

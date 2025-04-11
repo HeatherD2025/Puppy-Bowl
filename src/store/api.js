@@ -8,7 +8,7 @@ const API_URL = `https://fsa-puppy-bowl.herokuapp.com/api/${COHORT_CODE}/`;
 const api = createApi({
     reducerPath: "api",
     baseQuery: fetchBaseQuery ({
-        baseUrl: API_URL,
+        baseUrl: API_URL
     }),
     tagTypes: ["Puppy"],
     endpoints: () => ({}),
